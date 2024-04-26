@@ -834,7 +834,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 767751487}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 102900000, guid: 3b9b9b00d7ff7457785887b089c45bb4, type: 3}
+        m_TargetAssemblyTypeName: UnityEngine.Object, UnityEngine
+        m_MethodName: set_name
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Settings
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &767751487
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1140,6 +1152,7 @@ GameObject:
   - component: {fileID: 1581262191}
   - component: {fileID: 1581262190}
   - component: {fileID: 1581262189}
+  - component: {fileID: 1581262192}
   m_Layer: 5
   m_Name: Play
   m_TagString: Untagged
@@ -1210,7 +1223,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1581262190}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 11500000, guid: d772813264966449bbc36d699cdfc1da, type: 3}
+        m_TargetAssemblyTypeName: UnityEngine.Object, UnityEngine
+        m_MethodName: set_name
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Play()
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1581262190
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1249,6 +1274,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1581262187}
   m_CullTransparentMesh: 1
+--- !u!114 &1581262192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1581262187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d772813264966449bbc36d699cdfc1da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1667111793
 GameObject:
   m_ObjectHideFlags: 0
