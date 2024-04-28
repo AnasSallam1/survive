@@ -1,11 +1,20 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
-
-    public void LoadScene(int scene)
+    // .
+    public void LoadScene(string sceneName)
     {
-        Application.LoadLevel(scene);
+        SceneManager.LoadScene(sceneName);
+        Debug.Log("Load a new scene.");
+    }
+
+    // .
+    public void Exit()
+    {
+        Application.Quit();
+        Debug.Log("Exit the game.");
     }
 }
