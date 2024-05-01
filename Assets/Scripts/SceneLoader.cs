@@ -7,7 +7,9 @@ public class SceneLoader : MonoBehaviour
     // .
     public void LoadScene(string sceneName)
     {
-        SceneManager.LoadScene(sceneName);
+        SceneManager.LoadScene("LoadingScene"); // .
+        System.Threading.Thread.Sleep(1000);
+        SceneManager.LoadScene(sceneName); // .
         Debug.Log("Load a new scene.");
     }
 
