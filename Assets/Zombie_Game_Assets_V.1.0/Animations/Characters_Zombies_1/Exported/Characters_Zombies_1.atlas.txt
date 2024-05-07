@@ -1,0 +1,146 @@
+
+Characters_Zombies_1.png
+size: 2205,2205
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Arm_Left_4
+  rotate: true
+  xy: 8, 25
+  size: 213, 619
+  orig: 213, 619
+  offset: 0, 0
+  index: -1
+Arm_Left_5
+  rotate: true
+  xy: 837, 1026
+  size: 231, 610
+  orig: 231, 610
+  offset: 0, 0
+  index: -1
+Arm_Left_6
+  rotate: false
+  xy: 1159, 408
+  size: 222, 610
+  orig: 222, 610
+  offset: 0, 0
+  index: -1
+Arm_Right_4
+  rotate: false
+  xy: 1389, 483
+  size: 166, 535
+  orig: 166, 535
+  offset: 0, 0
+  index: -1
+Arm_Right_5
+  rotate: true
+  xy: 1389, 262
+  size: 170, 526
+  orig: 170, 526
+  offset: 0, 0
+  index: -1
+Arm_Right_6
+  rotate: false
+  xy: 1976, 1659
+  size: 164, 538
+  orig: 164, 538
+  offset: 0, 0
+  index: -1
+Body_4
+  rotate: false
+  xy: 1597, 1093
+  size: 365, 545
+  orig: 365, 545
+  offset: 0, 0
+  index: -1
+Body_5
+  rotate: false
+  xy: 790, 476
+  size: 361, 542
+  orig: 361, 542
+  offset: 0, 0
+  index: -1
+Body_6
+  rotate: false
+  xy: 1597, 1646
+  size: 371, 551
+  orig: 371, 551
+  offset: 0, 0
+  index: -1
+Border
+  rotate: true
+  xy: 1563, 677
+  size: 408, 349
+  orig: 408, 349
+  offset: 0, 0
+  index: -1
+Eyes_4
+  rotate: false
+  xy: 2148, 2142
+  size: 47, 55
+  orig: 47, 55
+  offset: 0, 0
+  index: -1
+Head_4
+  rotate: false
+  xy: 8, 246
+  size: 774, 926
+  orig: 774, 926
+  offset: 0, 0
+  index: -1
+Head_5
+  rotate: false
+  xy: 8, 1180
+  size: 821, 1017
+  orig: 821, 1017
+  offset: 0, 0
+  index: -1
+Head_6
+  rotate: false
+  xy: 837, 1265
+  size: 752, 932
+  orig: 752, 932
+  offset: 0, 0
+  index: -1
+Leg_Left_4
+  rotate: false
+  xy: 1970, 1180
+  size: 227, 458
+  orig: 227, 458
+  offset: 0, 0
+  index: -1
+Leg_Left_5
+  rotate: true
+  xy: 1563, 440
+  size: 229, 466
+  orig: 229, 466
+  offset: 0, 0
+  index: -1
+Leg_Left_6
+  rotate: true
+  xy: 1114, 22
+  size: 232, 474
+  orig: 232, 474
+  offset: 0, 0
+  index: -1
+Leg_Right_4
+  rotate: true
+  xy: 635, 12
+  size: 226, 471
+  orig: 226, 471
+  offset: 0, 0
+  index: -1
+Leg_Right_5
+  rotate: true
+  xy: 1596, 25
+  size: 229, 476
+  orig: 229, 476
+  offset: 0, 0
+  index: -1
+Leg_Right_6
+  rotate: false
+  xy: 1970, 701
+  size: 215, 471
+  orig: 215, 471
+  offset: 0, 0
+  index: -1

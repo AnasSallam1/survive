@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: Characters_Humans_1-3_SkeletonData
+  m_EditorClassIdentifier: Assembly-CSharp:Spine.Unity:SkeletonDataAsset
+  atlasAssets:
+  - {fileID: 11400000, guid: bc2bb8b952015c745b938ea53f0b5651, type: 2}
+  scale: 0.01
+  skeletonJSON: {fileID: 4900000, guid: 5a1ebd2a7762c88449b59ccce3a422aa, type: 3}
+  fromAnimation: []
+  toAnimation: []
+  duration: []
+  defaultMix: 0.2
+  controller: {fileID: 0}
