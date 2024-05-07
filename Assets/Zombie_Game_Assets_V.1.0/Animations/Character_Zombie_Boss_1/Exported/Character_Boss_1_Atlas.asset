@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: Character_Boss_1_Atlas
+  m_EditorClassIdentifier: Assembly-CSharp:Spine.Unity:AtlasAsset
+  atlasFile: {fileID: 4900000, guid: 2c815ffc9cb67d94395e7aca08fb3d8f, type: 3}
+  materials:
+  - {fileID: 2100000, guid: 29d65c8825f0d60479fc263a730542b0, type: 2}

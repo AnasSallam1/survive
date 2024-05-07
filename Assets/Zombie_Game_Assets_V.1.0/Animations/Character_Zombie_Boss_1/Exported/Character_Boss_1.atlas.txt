@@ -1,0 +1,55 @@
+
+Character_Boss_1.png
+size: 2739,2739
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Arm_Left_7
+  rotate: true
+  xy: 1148, 1015
+  size: 798, 1583
+  orig: 798, 1583
+  offset: 0, 0
+  index: -1
+Arm_Right_7
+  rotate: true
+  xy: 1148, 1821
+  size: 910, 1542
+  orig: 910, 1542
+  offset: 0, 0
+  index: -1
+Body_7
+  rotate: false
+  xy: 8, 1236
+  size: 1132, 1495
+  orig: 1132, 1495
+  offset: 0, 0
+  index: -1
+Eyes_7
+  rotate: false
+  xy: 2698, 2665
+  size: 32, 66
+  orig: 32, 66
+  offset: 0, 0
+  index: -1
+Head_7
+  rotate: true
+  xy: 612, 42
+  size: 965, 1394
+  orig: 965, 1394
+  offset: 0, 0
+  index: -1
+Leg_Left_7
+  rotate: false
+  xy: 2014, 202
+  size: 593, 805
+  orig: 593, 805
+  offset: 0, 0
+  index: -1
+Leg_Right_7
+  rotate: false
+  xy: 8, 421
+  size: 596, 807
+  orig: 596, 807
+  offset: 0, 0
+  index: -1

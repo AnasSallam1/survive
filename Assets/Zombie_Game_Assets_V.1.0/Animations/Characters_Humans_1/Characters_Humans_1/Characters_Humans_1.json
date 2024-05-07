@@ -1,0 +1,24 @@
+{"skeleton":{"images":"Import/"},
+"bones":[{"name":"root"}],
+"slots":[
+	{"name":"Arm_Right_1","bone":"root","attachment":"Arm_Right_1"},
+	{"name":"Leg_Right_1","bone":"root","attachment":"Leg_Right_1"},
+	{"name":"Body_1","bone":"root","attachment":"Body_1"},
+	{"name":"Leg_Left_1","bone":"root","attachment":"Leg_Left_1"},
+	{"name":"Head_1","bone":"root","attachment":"Head_1"},
+	{"name":"Eyes_1","bone":"root","attachment":"Eyes_1"},
+	{"name":"Arm_Left_1","bone":"root","attachment":"Arm_Left_1"}
+],
+"skins":{
+	"default":{
+		"Arm_Left_1":{"Arm_Left_1":{"x":273.5,"y":564.5,"width":215,"height":505}},
+		"Eyes_1":{"Eyes_1":{"x":392.5,"y":1101.5,"width":47,"height":55}},
+		"Head_1":{"Head_1":{"x":439,"y":1261.5,"width":878,"height":893}},
+		"Leg_Left_1":{"Leg_Left_1":{"x":326.5,"y":233,"width":211,"height":466}},
+		"Body_1":{"Body_1":{"x":379,"y":670,"width":466,"height":534}},
+		"Leg_Right_1":{"Leg_Right_1":{"x":521.5,"y":241,"width":211,"height":466}},
+		"Arm_Right_1":{"Arm_Right_1":{"x":535.5,"y":598.5,"width":195,"height":495}}
+	}
+},
+"animations":{"animation":{}}
+}
