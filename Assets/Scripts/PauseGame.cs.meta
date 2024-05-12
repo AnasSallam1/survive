@@ -3,7 +3,8 @@ guid: fcb6dedbd586943a4b1dfd5d46ea8a63
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - pauseMenu: {fileID: 188050, guid: b06f0e6c1dfa4356ac918da1bb32c603, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
