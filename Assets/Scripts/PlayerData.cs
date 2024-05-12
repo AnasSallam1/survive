@@ -7,7 +7,6 @@ public class PlayerData : MonoBehaviour
 {
     // Start is called before the first frame update
     public int playerID;
-    public int score;
     public int health;
     public Vector3 position;
 
