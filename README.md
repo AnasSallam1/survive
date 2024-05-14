@@ -1,7 +1,7 @@
 # Survive
 
 # Description
-Survive is a 2D post-apocalyptic game developed using Unity and C#. Players must navigate through a harsh, desolate world, scavenging for resources and fending off threats to stay alive.
+Survive is a 2D post-apocalyptic game developed using Unity and C#. Players must navigate through a long street fending off threats to stay alive and find their friends.
 
 # Features
 Immersive 2D graphics and engaging gameplay
@@ -13,7 +13,7 @@ Challenging environments and enemies
 To play Survive, follow these steps:
 
 1. Clone the repository:
-git clone https://github.com/Anas-010/survive.git
+`git clone https://github.com/Anas-010/survive.git`
 
 2. Open the project in Unity.
 
