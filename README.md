@@ -8,19 +8,21 @@ Immersive 2D graphics and engaging gameplay
 Resource scavenging and management
 Dynamic combat system
 Challenging environments and enemies
-Installation
+
+# Installation
 To play Survive, follow these steps:
 
-Clone the repository:
-bash
-Copy code
+1. Clone the repository:
 git clone https://github.com/Anas-010/survive.git
-Open the project in Unity.
-Build and run the game from the Unity editor.
-Usage
+
+2. Open the project in Unity.
+
+3. Build and run the game from the Unity editor.
+
+# Usage
 Navigate your character using the keyboard. Defend yourself from various threats to survive as long as possible to find your friends.
 
-Contributing
+# Contributing
 Contributions are welcome! Please follow these steps:
 
 Fork the repository.
@@ -28,8 +30,9 @@ Create a new branch (git checkout -b feature-branch).
 Commit your changes (git commit -am 'Add new feature').
 Push to the branch (git push origin feature-branch).
 Create a new Pull Request.
-License
+
+# License
 This project is licensed under the GPL-3.0 License. See the LICENSE file for details.
 
-Contact
-For any inquiries or issues, please open an issue on GitHub or contact the repository owner.
+# Contact
+For any inquiries or issues, please open an issue on GitHub or contact me.
