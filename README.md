@@ -1,9 +1,9 @@
 # Survive
 
-Description
+# Description
 Survive is a 2D post-apocalyptic game developed using Unity and C#. Players must navigate through a harsh, desolate world, scavenging for resources and fending off threats to stay alive.
 
-Features
+# Features
 Immersive 2D graphics and engaging gameplay
 Resource scavenging and management
 Dynamic combat system
