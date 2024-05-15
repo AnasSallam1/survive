@@ -14,7 +14,7 @@ To play Survive, follow these steps:
 
 1. Clone the repository:
 
-`git clone https://github.com/Anas-010/survive.git`
+   `git clone https://github.com/Anas-010/survive.git`
 
 3. Open the project in Unity.
 
