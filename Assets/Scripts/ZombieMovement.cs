@@ -2,17 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MonsterMovement : MonoBehaviour
+public class ZombieMovement : MonoBehaviour
 {
-    public Transform[] patrolPoints;
     public float moveSpeed;
-    public int patrolDestination;
-
     public Transform playerTransform;
     public bool isChasing;
+    public bool isAttacking;
     public float chaseDistance;
+    public float attackDistance;
 
     public Animator mAnimator;
+    public AudioSource walking;
 
     private void Start()
     {
@@ -22,57 +22,45 @@ public class MonsterMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        chaseDistance = 20;
+        attackDistance = 2;
 
-        if (isChasing)
+        // .
+        if ((Vector2.Distance(transform.position, playerTransform.position) < chaseDistance)
+            && (Vector2.Distance(transform.position, playerTransform.position) > attackDistance))
         {
+            isChasing = true;
 
-            if (transform.position.x > playerTransform.position.x)
+            if (isChasing)
             {
-                mAnimator.Play("Walk");
-                transform.position += Vector3.left * moveSpeed * Time.deltaTime;
-                //transform.localScale = new Vector3(-1, 1, 1);
-            }
-            if (transform.position.x < playerTransform.position.x)
-            {
-                mAnimator.Play("Walk");
-                transform.position += Vector3.right * moveSpeed * Time.deltaTime;
-                //transform.localScale = new Vector3(1, 1, 1);
-            }
+                mAnimator.SetTrigger("isWalking");
+                walking.Play();
 
-        }
-        else
-        {
-
-            if (Vector2.Distance(transform.position, playerTransform.position) < chaseDistance)
-            {
-                isChasing = true;
-            }
-            if (patrolDestination == 0)
-            {
-                transform.position = Vector2.MoveTowards(transform.position, patrolPoints[0].position, moveSpeed * Time.deltaTime);
-                if (Vector2.Distance(transform.position, patrolPoints[0].position) < .2f)
+                if (transform.position.x > playerTransform.position.x)
                 {
-                    patrolDestination = 1;
-                    //transform.localScale = new Vector3(-1, 1, 1);
-                }
-            }
-
-            if (patrolDestination == 1)
-            {
-                transform.position = Vector2.MoveTowards(transform.position, patrolPoints[1].position, moveSpeed * Time.deltaTime);
-                if (Vector2.Distance(transform.position, patrolPoints[1].position) < .2f)
-                {
-                    patrolDestination = 0;
-                    //transform.localScale = new Vector3(1, 1, 1);
-
+                    transform.position += Vector3.left * moveSpeed * Time.deltaTime;
                 }
 
             }
-
-
-
-
         }
+
+        // .
+        if (Vector2.Distance(transform.position, playerTransform.position) < attackDistance)
+        {
+            isAttacking = true;
+
+            if (isAttacking)
+            {
+                mAnimator.SetTrigger("isAttacking");
+
+                if (transform.position.x > playerTransform.position.x)
+                {
+                    transform.position += Vector3.left * 0 * Time.deltaTime;
+                }
+
+            }
+        }
+
     }
 
 }
