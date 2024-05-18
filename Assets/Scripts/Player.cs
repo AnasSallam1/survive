@@ -27,7 +27,7 @@ public class Player : MonoBehaviour
         mAnimator = GetComponent<Animator>();
 
         // Player is walking.
-        if (Input.GetKey(KeyCode.RightArrow) && !fliped)
+        if (Input.GetKey(KeyCode.RightArrow))
         {
             mAnimator.SetTrigger("isWalking");
             movement.x = Input.GetAxisRaw("Horizontal");
