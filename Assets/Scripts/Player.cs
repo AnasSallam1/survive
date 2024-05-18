@@ -14,6 +14,7 @@ public class Player : MonoBehaviour
     public Animator mAnimator;
     public Vector2 movement = new Vector2();
     public AudioSource footSteps;
+    bool fliped = true;
 
     //.
     private void Start()
@@ -26,37 +27,32 @@ public class Player : MonoBehaviour
         mAnimator = GetComponent<Animator>();
 
         // Player is walking.
-        if (Input.GetKey(KeyCode.RightArrow))
+        if (Input.GetKey(KeyCode.RightArrow) && !fliped)
         {
             mAnimator.SetTrigger("isWalking");
-            footSteps.Play();
             movement.x = Input.GetAxisRaw("Horizontal");
             Vector2 newPosition = new Vector2(movement.x * speed * Time.deltaTime, 0);
             transform.Translate(newPosition);
-        } else
+            footSteps.Play();
+        } else if (Input.GetKey(KeyCode.LeftArrow) && fliped)
         {
-            mAnimator.SetTrigger("isIdle");
-            footSteps.Stop();
+            FlipPlayer();
+            mAnimator.SetTrigger("isWalking");
             movement.x = Input.GetAxisRaw("Horizontal");
-            Vector2 newPosition = new Vector2(movement.x * 0 * Time.deltaTime, 0);
-            transform.Translate(newPosition);
+            Vector2 newPosition = new Vector2(movement.x * speed * Time.deltaTime, 0);
+            transform.Translate(-newPosition);
+            footSteps.Play();
         }
 
-        // Player is jumping.
-        if (Input.GetKey(KeyCode.UpArrow))
+            // Player is jumping.
+            if (Input.GetKey(KeyCode.UpArrow))
         {
             mAnimator.SetTrigger("isJumping");
             footSteps.Stop();
             movement.y = Input.GetAxisRaw("Vertical");
             Vector2 newPosition = new Vector2(0, movement.y * 5 * Time.deltaTime);
             transform.Translate(newPosition);
-        } else
-        {
             mAnimator.SetTrigger("isIdle");
-            footSteps.Stop();
-            movement.x = Input.GetAxisRaw("Horizontal");
-            Vector2 newPosition = new Vector2(movement.x * 0 * Time.deltaTime, 0);
-            transform.Translate(newPosition);
         }
 
         // Player is picking.
@@ -68,28 +64,20 @@ public class Player : MonoBehaviour
             Vector2 newPosition = new Vector2(movement.x * 0 * Time.deltaTime, 0);
             transform.Translate(newPosition);
         }
-        else
+        /*else
         {
             mAnimator.SetTrigger("isIdle");
             footSteps.Stop();
             movement.x = Input.GetAxisRaw("Horizontal");
             Vector2 newPosition = new Vector2(movement.x * 0 * Time.deltaTime, 0);
             transform.Translate(newPosition);
-        }
+        }*/
 
         // Player is shooting.
         if (Input.GetKey(KeyCode.D))
         {
             mAnimator.SetTrigger("isShooting");
             zombieHealth.ZombieDamage(damage);
-        }
-        else
-        {
-            mAnimator.SetTrigger("isIdle");
-            footSteps.Stop();
-            movement.x = Input.GetAxisRaw("Horizontal");
-            Vector2 newPosition = new Vector2(movement.x * 0 * Time.deltaTime, 0);
-            transform.Translate(newPosition);
         }
 
         // Player is walking & shooting.
@@ -100,15 +88,15 @@ public class Player : MonoBehaviour
             Vector2 newPosition = new Vector2(movement.x * speed * Time.deltaTime, 0);
             transform.Translate(newPosition);
         }
-        else
-        {
-            mAnimator.SetTrigger("isIdle");
-            footSteps.Stop();
-            movement.x = Input.GetAxisRaw("Horizontal");
-            Vector2 newPosition = new Vector2(movement.x * 0 * Time.deltaTime, 0);
-            transform.Translate(newPosition);
-        }
 
+    }
+
+    void FlipPlayer()
+    {
+        Vector3 currentScale = gameObject.transform.localScale;
+        currentScale.x *= -1;
+        gameObject.transform.localScale = currentScale;
+        fliped = !fliped;
     }
 
 }

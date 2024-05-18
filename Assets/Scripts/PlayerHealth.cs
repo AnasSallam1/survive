@@ -34,8 +34,8 @@ public class PlayerHealth : MonoBehaviour
         {
             mAnimator.SetTrigger("isDead");
             Wait(2000);
-            //Destroy(gameObject);
-            //SceneManager.LoadScene("GameOver");
+            Destroy(gameObject);
+            SceneManager.LoadScene("GameOver");
         }
     }
 }
