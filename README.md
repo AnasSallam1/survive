@@ -30,7 +30,7 @@ Contributions are welcome! Please follow these steps:
    - `git checkout -b feature-branch`
    
 3. Commit your changes.
-   - `git commit -am 'Add new feature`
+   - `git commit -am "Add new feature"`
      
 4. Push to the branch.
    - `git push origin feature-branch`
