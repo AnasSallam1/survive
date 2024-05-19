@@ -91,6 +91,12 @@ public class Player : MonoBehaviour
 
     }
 
+    /****************************************************************************************
+     *                                 Utility Functions
+     * **************************************************************************************/
+
+
+    // .
     void FlipPlayer()
     {
         Vector3 currentScale = gameObject.transform.localScale;
@@ -98,5 +104,17 @@ public class Player : MonoBehaviour
         gameObject.transform.localScale = currentScale;
         fliped = !fliped;
     }
+
+    // .
+    /*private void Wait(int time)
+    {
+        Thread thread = new Thread(delegate ()
+        {
+            System.Threading.Thread.Sleep(time);
+        });
+        thread.Start();
+        while (thread.isAlive)
+            Application.DoEvents();
+    }*/
 
 }
