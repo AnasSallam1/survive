@@ -1350,6 +1350,7 @@ GameObject:
   - component: {fileID: 324709129}
   - component: {fileID: 324709131}
   - component: {fileID: 324709130}
+  - component: {fileID: 324709132}
   m_Layer: 0
   m_Name: Player-1
   m_TagString: Player
@@ -1677,7 +1678,8 @@ MonoBehaviour:
   health: 100
   speed: 4
   playerPosition: 0
-  zombie: {fileID: 0}
+  damage: 30
+  zombieHealth: {fileID: 0}
   mAnimator: {fileID: 324709127}
   movement: {x: 0, y: 0}
   footSteps: {fileID: 0}
@@ -1777,6 +1779,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &324709132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 324709124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a3289a7790024c9297130d0a54b4e7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  health: 100
+  mAnimator: {fileID: 324709127}
 --- !u!1 &333947841
 GameObject:
   m_ObjectHideFlags: 0
@@ -2509,6 +2526,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   speed: 4
+  patrolDestination: 0
+  playerTranform: {fileID: 0}
   playerPosition: 0
   zombiePosition: 0
   player: {fileID: 0}
@@ -3206,6 +3225,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   speed: 4
+  patrolDestination: 0
+  playerTranform: {fileID: 0}
   playerPosition: 0
   zombiePosition: 0
   player: {fileID: 0}
@@ -5841,6 +5862,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   speed: 4
+  patrolDestination: 0
+  playerTranform: {fileID: 0}
   playerPosition: 0
   zombiePosition: 0
   player: {fileID: 324709124}
@@ -9363,7 +9386,7 @@ Transform:
   m_GameObject: {fileID: 1489826724}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.3, y: -26.5, z: 0}
+  m_LocalPosition: {x: 281.1, y: -8.3, z: 0}
   m_LocalScale: {x: -1.3554, y: 1.3208846, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9793,6 +9816,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   speed: 4
+  patrolDestination: 0
+  playerTranform: {fileID: 0}
   playerPosition: 0
   zombiePosition: 0
   player: {fileID: 0}
