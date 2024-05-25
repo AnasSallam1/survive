@@ -6,7 +6,7 @@ public class LoadingScene : MonoBehaviour
 {
     private void Start()
     {
-        System.Threading.Thread.Sleep(4000);
+        System.Threading.Thread.Sleep(3000);
         SceneManager.LoadScene("Level-1");
     }
 }
