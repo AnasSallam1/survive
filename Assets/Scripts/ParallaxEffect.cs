@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Parallax : MonoBehaviour
+public class ParallaxEffect : MonoBehaviour
 {
     // Global variables.
     private float length, startPos;
