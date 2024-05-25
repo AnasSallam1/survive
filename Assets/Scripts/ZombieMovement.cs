@@ -25,7 +25,7 @@ public class ZombieMovement : MonoBehaviour
         chaseDistance = 20;
         attackDistance = 2;
 
-        // .
+        // Zombie chase the player.
         if ((Vector2.Distance(transform.position, playerTransform.position) < chaseDistance)
             && (Vector2.Distance(transform.position, playerTransform.position) > attackDistance))
         {
@@ -44,7 +44,7 @@ public class ZombieMovement : MonoBehaviour
             }
         }
 
-        // .
+        // Zombie attacks the player.
         if (Vector2.Distance(transform.position, playerTransform.position) < attackDistance)
         {
             isAttacking = true;
