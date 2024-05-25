@@ -40,5 +40,5 @@ Contributions are welcome! Please follow these steps:
 ## License
 This project is licensed under the GPL-3.0 License. See the LICENSE file for details.
 
-# Contact
+## Contact
 For any inquiries or issues, please open an issue on GitHub or contact me.
