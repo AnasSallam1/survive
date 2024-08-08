@@ -12,7 +12,7 @@ public class PauseGame: MonoBehaviour
 
     }
 
-    // .
+    // Pause the game when Space is pressed.
     public void Pause()
     {
         if (Input.GetKey(KeyCode.Space))
