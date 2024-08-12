@@ -22,7 +22,7 @@ public class PauseGame: MonoBehaviour
         }
     }
 
-    // Continue the game when.
+    // Continue the game when Space is pressed again.
     public void Continue()
     {
         PausePanel.SetActive(false);
