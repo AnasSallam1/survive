@@ -22,7 +22,7 @@ public class PauseGame: MonoBehaviour
         }
     }
 
-    // .
+    // Continue.
     public void Continue()
     {
         PausePanel.SetActive(false);
