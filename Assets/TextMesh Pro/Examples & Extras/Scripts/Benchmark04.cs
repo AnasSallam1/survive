@@ -45,7 +45,9 @@ namespace TMPro.Examples
                     //textMeshPro.anchor = AnchorPositions.Left;
                     textMeshPro.rectTransform.pivot = new Vector2(0, 0.5f);
 
+#pragma warning disable CS0618 // Type or member is obsolete
                     textMeshPro.enableWordWrapping = false;
+#pragma warning restore CS0618 // Type or member is obsolete
                     textMeshPro.extraPadding = true;
                     textMeshPro.isOrthographic = true;
                     textMeshPro.fontSize = i;

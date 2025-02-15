@@ -34,7 +34,7 @@ namespace TMPro.Examples
             m_textMeshPro.fontSize = 48;
 
             m_textMeshPro.alignment = TextAlignmentOptions.Center;
-            
+
             //m_textMeshPro.anchorDampening = true; // Has been deprecated but under consideration for re-implementation.
             //m_textMeshPro.enableAutoSizing = true;
 
@@ -42,7 +42,9 @@ namespace TMPro.Examples
             //m_textMeshPro.wordSpacing = 0.1f;
 
             //m_textMeshPro.enableCulling = true;
+#pragma warning disable CS0618 // Type or member is obsolete
             m_textMeshPro.enableWordWrapping = false;
+#pragma warning restore CS0618 // Type or member is obsolete
 
             //textMeshPro.fontColor = new Color32(255, 255, 255, 255);
         }

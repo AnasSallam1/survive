@@ -65,7 +65,9 @@ namespace TMPro.Examples
                 m_textMeshPro.fontSize = 24;
                 //m_textMeshPro.enableExtraPadding = true;
                 //m_textMeshPro.enableShadows = false;
+#pragma warning disable CS0618 // Type or member is obsolete
                 m_textMeshPro.enableKerning = false;
+#pragma warning restore CS0618 // Type or member is obsolete
                 m_textMeshPro.text = string.Empty;
                 m_textMeshPro.isTextObjectScaleStatic = IsTextObjectScaleStatic;
 
