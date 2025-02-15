@@ -29,7 +29,6 @@ public class HealthBar : MonoBehaviour
         // Update Health property.
         float HealthUpdate = 0f;
         // .
-        //if ()
         HealthUpdate = Mathf.MoveTowards(ThisTransform.rect.width, 0, MaxSpeed);
 
         ThisTransform.sizeDelta = new Vector2(Mathf.Clamp(0, 0, 100), ThisTransform.sizeDelta.y);

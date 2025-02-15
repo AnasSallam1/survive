@@ -9,10 +9,10 @@ public class PauseGame: MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+    
     }
 
-    // .
+    // Pause the game when Space is pressed.
     public void Pause()
     {
         if (Input.GetKey(KeyCode.Space))
@@ -22,7 +22,7 @@ public class PauseGame: MonoBehaviour
         }
     }
 
-    // .
+    // Continue the game when Space is pressed again.
     public void Continue()
     {
         PausePanel.SetActive(false);

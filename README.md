@@ -1,10 +1,11 @@
 # Survive
 
 ## Description
+
 **Survive** is a **2D** post-apocalyptic game developed using **Unity** and **C#**. The player must navigate through a long street fending off zombies to stay alive and find his friends.
 
 ## Features
-- Immersive 2D graphics and engaging gameplay
+- Immersive **2D** graphics and engaging gameplay
 - Resource scavenging and management
 - Dynamic combat system
 - Challenging environments and enemies
@@ -40,5 +41,5 @@ Contributions are welcome! Please follow these steps:
 ## License
 This project is licensed under the GPL-3.0 License. See the LICENSE file for details.
 
-# Contact
+## Contact
 For any inquiries or issues, please open an issue on GitHub or contact me.
