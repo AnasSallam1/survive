@@ -13,7 +13,6 @@ public class GameManager : MonoBehaviour
                 Debug.LogError("ERROR: No GameManager exists in scene.");
             return _instance; 
         }
-
     }
 
     // Set the _instance reference at the soonest opportunity when the game starts.

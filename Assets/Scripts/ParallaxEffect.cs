@@ -2,31 +2,36 @@ using UnityEngine;
 
 public class ParallaxEffect : MonoBehaviour
 {
-    // Global variables.
     private float length, startPos;
-    public GameObject cam;
+    [SerializeField] private GameObject cam; // Assign via Inspector or auto-find
     public float parallaxEffect;
 
-    // Start is called before the first frame update.
     void Start()
     {
+        // Auto-assign main camera if not set in Inspector
+        if (cam == null)
+        {
+            cam = Camera.main?.gameObject;
+            if (cam == null)
+                Debug.LogError("Assign a camera or ensure a Main Camera exists!");
+        }
+
         startPos = transform.position.x;
         length = GetComponent<SpriteRenderer>().bounds.size.x;
     }
 
-    // Update is called once per frame.
     void Update()
     {
-        float temp = (cam.transform.position.x * (1 - parallaxEffect));
+        // Guard clause if cam is still null
+        if (cam == null) return;
+
+        float temp = cam.transform.position.x * (1 - parallaxEffect);
         float distance = (cam.transform.position.x * parallaxEffect);
         transform.position = new Vector3(startPos + distance, transform.position.y, transform.position.z);
 
         if (temp > startPos + length)
-        {
             startPos += length;
-        } else if (temp < startPos - length) {
+        else if (temp < startPos - length)
             startPos -= length;
-        }
-
     }
 }

@@ -1,7 +1,8 @@
 # Survive
 
 ## Description
-**Survive** is a 2D action game set in a post-apocalyptic world where players must fight through hordes of zombies in a quest to reunite with their friends. The game immerses players in a destroyed city, complete with atmospheric music and sound effects. This game was developed using **Unity** and **C#**.
+
+**Survive** is a **2D** post-apocalyptic game developed using **Unity** and **C#**. The player must navigate through a long street fending off zombies to stay alive and find his friends.
 
 ## Features
 - Immersive **2D** graphics and engaging gameplay

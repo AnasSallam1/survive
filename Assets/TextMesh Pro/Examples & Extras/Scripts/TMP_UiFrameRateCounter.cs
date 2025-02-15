@@ -39,7 +39,9 @@ namespace TMPro.Examples
             m_TextMeshPro.font = Resources.Load<TMP_FontAsset>("Fonts & Materials/LiberationSans SDF");
             m_TextMeshPro.fontSharedMaterial = Resources.Load<Material>("Fonts & Materials/LiberationSans SDF - Overlay");
 
+#pragma warning disable CS0618 // Type or member is obsolete
             m_TextMeshPro.enableWordWrapping = false;
+#pragma warning restore CS0618 // Type or member is obsolete
             m_TextMeshPro.fontSize = 36;
 
             m_TextMeshPro.isOverlay = true;

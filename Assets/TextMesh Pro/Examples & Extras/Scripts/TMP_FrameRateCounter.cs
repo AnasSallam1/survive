@@ -43,7 +43,9 @@ namespace TMPro.Examples
             m_frameCounter_transform.SetParent(m_camera.transform);
             m_frameCounter_transform.localRotation = Quaternion.identity;
 
+#pragma warning disable CS0618 // Type or member is obsolete
             m_TextMeshPro.enableWordWrapping = false;
+#pragma warning restore CS0618 // Type or member is obsolete
             m_TextMeshPro.fontSize = 24;
             //m_TextMeshPro.FontColor = new Color32(255, 255, 255, 128);
             //m_TextMeshPro.edgeWidth = .15f;

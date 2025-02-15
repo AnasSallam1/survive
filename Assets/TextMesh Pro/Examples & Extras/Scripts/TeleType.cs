@@ -24,7 +24,9 @@ namespace TMPro.Examples
             // Get Reference to TextMeshPro Component
             m_textMeshPro = GetComponent<TMP_Text>();
             m_textMeshPro.text = label01;
+#pragma warning disable CS0618 // Type or member is obsolete
             m_textMeshPro.enableWordWrapping = true;
+#pragma warning restore CS0618 // Type or member is obsolete
             m_textMeshPro.alignment = TextAlignmentOptions.Top;
 
 

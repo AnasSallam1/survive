@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.TerrainTools;
 
 
 namespace TMPro.Examples
@@ -150,8 +151,8 @@ namespace TMPro.Examples
                     destinationVertices[vertexIndex + 3] += offset;
 
                     // Restore Source UVS which have been modified by the sorting
-                    Vector2[] sourceUVs0 = cachedMeshInfoVertexData[materialIndex].uvs0;
-                    Vector2[] destinationUVs0 = textInfo.meshInfo[materialIndex].uvs0;
+                    Vector4[] sourceUVs0 = cachedMeshInfoVertexData[materialIndex].uvs0;
+                    Vector4[] destinationUVs0 = textInfo.meshInfo[materialIndex].uvs0;
 
                     destinationUVs0[vertexIndex + 0] = sourceUVs0[vertexIndex + 0];
                     destinationUVs0[vertexIndex + 1] = sourceUVs0[vertexIndex + 1];
@@ -168,6 +169,8 @@ namespace TMPro.Examples
                     destinationColors32[vertexIndex + 3] = sourceColors32[vertexIndex + 3];
                 }
 
+
+
                 // Push changes into meshes
                 for (int i = 0; i < textInfo.meshInfo.Length; i++)
                 {
@@ -178,7 +181,23 @@ namespace TMPro.Examples
 
                     // Updated modified vertex attributes
                     textInfo.meshInfo[i].mesh.vertices = textInfo.meshInfo[i].vertices;
-                    textInfo.meshInfo[i].mesh.uv = textInfo.meshInfo[i].uvs0;
+                    //textInfo.meshInfo[i].mesh.uv = textInfo.meshInfo[i].uvs0;
+
+
+                    // Updated modified vertex attributes
+                    textInfo.meshInfo[i].mesh.vertices = textInfo.meshInfo[i].vertices;
+
+                    // Convert Vector4[] uvs0 to Vector2[] for UVs
+                    Vector4[] uvs0 = textInfo.meshInfo[i].uvs0;
+                    Vector2[] uvs = new Vector2[uvs0.Length];
+                    for (int j = 0; j < uvs0.Length; j++)
+                    {
+                        uvs[j] = new Vector2(uvs0[j].x, uvs0[j].y);
+                    }
+                    textInfo.meshInfo[i].mesh.uv = uvs; // Assign converted Vector2 array
+
+
+                    textInfo.meshInfo[i].mesh.colors32 = textInfo.meshInfo[i].colors32;
                     textInfo.meshInfo[i].mesh.colors32 = textInfo.meshInfo[i].colors32;
 
                     m_TextComponent.UpdateGeometry(textInfo.meshInfo[i].mesh, i);

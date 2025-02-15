@@ -35,7 +35,9 @@ namespace TMPro.Examples
 
                     textMeshPro.alignment = TextAlignmentOptions.Bottom;
                     textMeshPro.fontSize = 96;
+#pragma warning disable CS0618 // Type or member is obsolete
                     textMeshPro.enableKerning = false;
+#pragma warning restore CS0618 // Type or member is obsolete
 
                     textMeshPro.color = new Color32(255, 255, 0, 255);
                     textMeshPro.text = "!";
