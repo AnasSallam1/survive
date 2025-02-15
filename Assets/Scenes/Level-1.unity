@@ -1085,10 +1085,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 259001160}
-  - component: {fileID: 259001161}
   m_Layer: 0
   m_Name: Props
-  m_TagString: Untagged
+  m_TagString: Building
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1182,20 +1181,6 @@ Transform:
   - {fileID: 1953604440}
   m_Father: {fileID: 1119653011}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &259001161
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 259001159}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c21480ac52f184c8e899f1f8d1ee696e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cam: {fileID: 519420028}
-  parallaxEffect: 0
 --- !u!1 &271275643
 GameObject:
   m_ObjectHideFlags: 0
@@ -1406,6 +1391,7 @@ Transform:
   m_LocalScale: {x: 1.0272663, y: 1.0859567, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 519420032}
   - {fileID: 1158826908}
   m_Father: {fileID: 911693641}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2588,13 +2574,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 0
-  playerTransform: {fileID: 0}
+  playerTransform: {fileID: 324709125}
   isChasing: 0
   isAttacking: 0
   chaseDistance: 0
   attackDistance: 0
   mAnimator: {fileID: 0}
-  walking: {fileID: 0}
+  walking: {fileID: 1509416955}
 --- !u!1 &474818439
 GameObject:
   m_ObjectHideFlags: 0
@@ -2922,11 +2908,11 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -14.785245, y: -7.0502014, z: -9.68144}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 10.892988, y: 6.197301, z: -10}
+  m_LocalScale: {x: 0.97345746, y: 0.920847, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 324709125}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &519420033
 MonoBehaviour:
@@ -3295,13 +3281,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 0
-  playerTransform: {fileID: 0}
+  playerTransform: {fileID: 324709125}
   isChasing: 0
   isAttacking: 0
   chaseDistance: 0
   attackDistance: 0
   mAnimator: {fileID: 0}
-  walking: {fileID: 0}
+  walking: {fileID: 1509416955}
 --- !u!1 &550376117
 GameObject:
   m_ObjectHideFlags: 0
@@ -4850,10 +4836,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 696943770}
-  - component: {fileID: 696943771}
   m_Layer: 0
   m_Name: Plants
-  m_TagString: Untagged
+  m_TagString: Building
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4890,20 +4875,6 @@ Transform:
   - {fileID: 1025690093}
   m_Father: {fileID: 1119653011}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &696943771
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 696943769}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c21480ac52f184c8e899f1f8d1ee696e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cam: {fileID: 519420028}
-  parallaxEffect: 0
 --- !u!1 &715319620
 GameObject:
   m_ObjectHideFlags: 0
@@ -6010,13 +5981,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 0
-  playerTransform: {fileID: 0}
+  playerTransform: {fileID: 324709125}
   isChasing: 0
   isAttacking: 0
   chaseDistance: 0
   attackDistance: 0
   mAnimator: {fileID: 0}
-  walking: {fileID: 0}
+  walking: {fileID: 1509416955}
 --- !u!1 &910237607
 GameObject:
   m_ObjectHideFlags: 0
@@ -7262,6 +7233,7 @@ Transform:
   - {fileID: 521242292}
   - {fileID: 895016313}
   - {fileID: 1489826725}
+  - {fileID: 1509416954}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1119653010
@@ -7825,7 +7797,7 @@ GameObject:
   - component: {fileID: 1155929954}
   m_Layer: 0
   m_Name: Tiles
-  m_TagString: Untagged
+  m_TagString: Building
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10078,13 +10050,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 0
-  playerTransform: {fileID: 0}
+  playerTransform: {fileID: 324709125}
   isChasing: 0
   isAttacking: 0
   chaseDistance: 0
   attackDistance: 0
   mAnimator: {fileID: 0}
-  walking: {fileID: 0}
+  walking: {fileID: 1509416955}
 --- !u!1 &1493950065
 GameObject:
   m_ObjectHideFlags: 0
@@ -10433,6 +10405,135 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1509416953
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1509416954}
+  - component: {fileID: 1509416955}
+  m_Layer: 0
+  m_Name: Walking Sound
+  m_TagString: Audio
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1509416954
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1509416953}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1115858904}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1509416955
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1509416953}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: c896dcb384d3342c89a44e5018e6b8f6, type: 3}
+  m_Resource: {fileID: 8300000, guid: c896dcb384d3342c89a44e5018e6b8f6, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1549993413
 GameObject:
   m_ObjectHideFlags: 0
@@ -15382,7 +15483,6 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 619394802}
-  - {fileID: 519420032}
   - {fileID: 1119653011}
   - {fileID: 911693641}
   - {fileID: 1115858904}

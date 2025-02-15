@@ -1,15 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ZombieMovement : MonoBehaviour
 {
     public float moveSpeed;
-    public Transform playerTransform;
+    [SerializeField] Transform playerTransform; // Assign via Inspector or auto-detect
     public bool isChasing;
     public bool isAttacking;
-    public float chaseDistance;
-    public float attackDistance;
+    public float chaseDistance = 20f; // Initialize here
+    public float attackDistance = 2f;
 
     public Animator mAnimator;
     public AudioSource walking;
@@ -17,50 +15,61 @@ public class ZombieMovement : MonoBehaviour
     private void Start()
     {
         mAnimator = GetComponent<Animator>();
+
+        // Auto-detect player if not assigned
+        if (playerTransform == null)
+        {
+            GameObject player = GameObject.FindWithTag("Player");
+            if (player != null)
+            {
+                playerTransform = player.transform;
+            }
+            else
+            {
+                Debug.LogError("Player not found! Assign a player or tag your player GameObject with 'Player'.", this);
+                enabled = false; // Disable script
+            }
+        }
     }
 
-    // Update is called once per frame
     void Update()
     {
-        chaseDistance = 20;
-        attackDistance = 2;
+        if (playerTransform == null) return; // Guard clause
 
-        // Zombie chase the player.
-        if ((Vector2.Distance(transform.position, playerTransform.position) < chaseDistance)
-            && (Vector2.Distance(transform.position, playerTransform.position) > attackDistance))
+        // Zombie chase logic
+        float distanceToPlayer = Vector3.Distance(transform.position, playerTransform.position);
+
+        if (distanceToPlayer < chaseDistance && distanceToPlayer > attackDistance)
         {
             isChasing = true;
+            isAttacking = false;
 
-            if (isChasing)
-            {
-                mAnimator.SetTrigger("isWalking");
-                walking.Play();
+            mAnimator.SetTrigger("isWalking");
+            if (!walking.isPlaying) walking.Play();
 
-                if (transform.position.x > playerTransform.position.x)
-                {
-                    transform.position += Vector3.left * moveSpeed * Time.deltaTime;
-                }
+            // Move towards player
+            Vector3 direction = (playerTransform.position - transform.position).normalized;
+            transform.position += direction * moveSpeed * Time.deltaTime;
 
-            }
+            // Flip sprite based on direction
+            if (direction.x < 0)
+                transform.localScale = new Vector3(-1, 1, 1); // Flip left
+            else
+                transform.localScale = new Vector3(1, 1, 1); // Flip right
         }
-
-        // Zombie attacks the player.
-        if (Vector2.Distance(transform.position, playerTransform.position) < attackDistance)
+        else if (distanceToPlayer <= attackDistance)
         {
+            isChasing = false;
             isAttacking = true;
 
-            if (isAttacking)
-            {
-                mAnimator.SetTrigger("isAttacking");
-
-                if (transform.position.x > playerTransform.position.x)
-                {
-                    transform.position += Vector3.left * 0 * Time.deltaTime;
-                }
-
-            }
+            mAnimator.SetTrigger("isAttacking");
+            walking.Stop();
         }
-
+        else
+        {
+            isChasing = false;
+            isAttacking = false;
+            walking.Stop();
+        }
     }
-
 }

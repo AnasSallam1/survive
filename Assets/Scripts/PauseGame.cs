@@ -1,31 +1,47 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class PauseGame: MonoBehaviour
+public class PauseGame : MonoBehaviour
 {
-    public GameObject PausePanel;
+    public GameObject pausePanel;
+    private bool isPaused = false;
 
-    // Update is called once per frame
     void Update()
     {
+        // Toggle pause when Space is pressed
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            TogglePause();
+        }
+    }
 
+    public void TogglePause()
+    {
+        isPaused = !isPaused;
+
+        if (isPaused)
+        {
+            Pause();
+        }
+        else
+        {
+            Continue();
+        }
     }
 
     // .
-    public void Pause()
+    void Pause()
     {
-        if (Input.GetKey(KeyCode.Space))
-        {
-            PausePanel.SetActive(true);
-            Time.timeScale = 0;
-        }
+        pausePanel.SetActive(true);
+        Time.timeScale = 0f;
+        AudioListener.pause = true; // Pause all audio
     }
 
     // .
     public void Continue()
     {
-        PausePanel.SetActive(false);
-        Time.timeScale = 1;
+        pausePanel.SetActive(false);
+        Time.timeScale = 1f;
+        AudioListener.pause = false; // Resume audio
+        isPaused = false;
     }
 }
