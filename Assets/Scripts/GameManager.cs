@@ -1,20 +1,46 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    // A static private variable to hold the reference to this Game Manager instance.
     private static GameManager _instance;
-    // A public static Property to allow other classes to get the refernece.
-    public static GameManager Instance {
-        get { 
+
+    public static GameManager Instance
+    {
+        get
+        {
             if (_instance == null)
-                Debug.LogError("ERROR: No GameManager exists in scene.");
-            return _instance; 
+            {
+                // Updated to use non-deprecated method
+                _instance = FindFirstObjectByType<GameManager>(FindObjectsInactive.Exclude);
+
+                if (_instance == null)
+                {
+                    Debug.LogError("No GameManager found in scene. Creating temporary instance.");
+                    _instance = new GameObject("TempGameManager").AddComponent<GameManager>();
+                }
+            }
+            return _instance;
         }
     }
 
-    // Set the _instance reference at the soonest opportunity when the game starts.
-    private void Awake() => _instance = this; 
+    private void Awake()
+    {
+        // Ensure only one instance exists
+        if (_instance != null && _instance != this)
+        {
+            Debug.LogWarning("Duplicate GameManager detected. Destroying new instance.");
+            Destroy(gameObject);
+        }
+        else
+        {
+            _instance = this;
+            DontDestroyOnLoad(gameObject); // For scene persistence
+        }
+    }
+
+    // Add your game management functionality below
+    // Example:
+    // public int Score { get; private set; }
+    // public void AddScore(int points) => Score += points;
+
 }
