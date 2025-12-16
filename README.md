@@ -1,6 +1,7 @@
 # Survive
 
 ## Description
+<<<<<<< HEAD
 
 **Survive** is a **2D** post-apocalyptic game developed using **Unity** and **C#**. The player must navigate through a long street fending off zombies to stay alive and find his friends.
 
@@ -20,6 +21,26 @@ To play **Survive**, follow these steps:
 
 4. Build and run the game from the **Unity** editor.
 
+=======
+**Survive** is a **2D** post-apocalyptic game developed using **Unity** and **C#**. The player must navigate through a long street fending off zombies to stay alive and find his friends.
+
+## Features
+- Immersive 2D graphics and engaging gameplay
+- Resource scavenging and management
+- Dynamic combat system
+- Challenging environments and enemies
+
+## Installation
+To play **Survive**, follow these steps:
+
+1. Clone the repository.
+   - `git clone https://github.com/Anas-010/survive.git`
+
+3. Open the project in **Unity**.
+
+4. Build and run the game from the **Unity** editor.
+
+>>>>>>> local
 ## How to Play
 Navigate your character using the keyboard. Defend yourself from various threats to survive as long as possible to find your friends.
 
