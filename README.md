@@ -38,7 +38,6 @@ To play **Survive**, follow these steps:
 
 4. Build and run the game from the **Unity** editor.
 
->>>>>>> local
 ## How to Play
 Navigate your character using the keyboard. Defend yourself from various threats to survive as long as possible to find your friends.
 
