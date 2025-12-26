@@ -7,14 +7,7 @@ public class PauseGame : MonoBehaviour
 
     void Update()
     {
-<<<<<<< HEAD
-    
-    }
-
-    // Pause the game when Space is pressed.
-    public void Pause()
-=======
-        // Toggle pause when Space is pressed
+        // Unity checks for input every frame here
         if (Input.GetKeyDown(KeyCode.Space))
         {
             TogglePause();
@@ -27,7 +20,7 @@ public class PauseGame : MonoBehaviour
 
         if (isPaused)
         {
-            Pause();
+            SetPauseState();
         }
         else
         {
@@ -35,21 +28,19 @@ public class PauseGame : MonoBehaviour
         }
     }
 
-    // .
-    void Pause()
->>>>>>> local
+    // 
+    void SetPauseState()
     {
         pausePanel.SetActive(true);
         Time.timeScale = 0f;
-        AudioListener.pause = true; // Pause all audio
+        AudioListener.pause = true;
     }
 
-    // Continue the game when Space is pressed again.
     public void Continue()
     {
         pausePanel.SetActive(false);
         Time.timeScale = 1f;
-        AudioListener.pause = false; // Resume audio
+        AudioListener.pause = false;
         isPaused = false;
     }
 }

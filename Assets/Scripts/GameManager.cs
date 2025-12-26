@@ -3,14 +3,6 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     private static GameManager _instance;
-<<<<<<< HEAD
-    // A public static Property to allow other classes to get the refernece.
-    public static GameManager Instance {
-        get { 
-            if (_instance == null)
-                Debug.LogError("ERROR: No GameManager exists in scene.");
-            return _instance; 
-=======
 
     public static GameManager Instance
     {
@@ -28,7 +20,6 @@ public class GameManager : MonoBehaviour
                 }
             }
             return _instance;
->>>>>>> local
         }
     }
 
